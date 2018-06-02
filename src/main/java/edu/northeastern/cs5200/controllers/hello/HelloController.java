@@ -31,4 +31,14 @@ public class HelloController {
     public List<HelloObject> selectAllHelloObjects() {
         return helloRepository.findAll();
     }
+
+    @RequestMapping("/api/hello/string")
+    public String sayHello() {
+        return "Hello Harshit Vora!";
+    }
+
+    @RequestMapping("/api/hello/object")
+    public HelloObject sayHelloObject() {
+        return new HelloObject("Hello Harshit Vora!");
+    }
 }
